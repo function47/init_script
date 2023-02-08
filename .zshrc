@@ -190,7 +190,7 @@ DISABLE_CORRECTION="true"
 # completion detail
 zstyle ':completion:*:complete:-command-:*:*' ignored-patterns '*.pdf|*.exe|*.dll'
 zstyle ':completion:*:*sh:*:' tag-order files	
-export PS1="%F{047}%B%n%F{125}@%m %f%b%~%(#.#.$) "
+export PS1="%F{047}%B%n%F{125}@$pcname %f%b%~%(#.#.$) "
 export XILINXD_LICENSE_FILE=2100@xilinxlicense.massopen.cloud
 export VIVADO_ROOT=/tools/Xilinx/Vivado/2021.2
 export pciBar=/sys/devices/pci0000:3a/0000:3a:00.0/0000:3b:00.0/resource2
