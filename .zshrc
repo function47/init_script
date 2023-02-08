@@ -193,9 +193,11 @@ zstyle ':completion:*:*sh:*:' tag-order files
 export PS1="%F{047}%B%n%F{125}@%m %f%b%~%(#.#.$) "
 export XILINXD_LICENSE_FILE=2100@xilinxlicense.massopen.cloud
 export VIVADO_ROOT=/tools/Xilinx/Vivado/2021.2
-alias vnc="vncserver -geometry 1920x1080 :4"
 export pciBar=/sys/devices/pci0000:3a/0000:3a:00.0/0000:3b:00.0/resource2
+export PATH=$PATH:/opt/xilinx/xrt/bin
 
+alias vnc="vncserver -geometry 1920x1080 :4"
+alias sudopath="sudo env PATH=$PATH"
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/zhhan/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
