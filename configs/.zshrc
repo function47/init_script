@@ -183,6 +183,13 @@ alias sudopath="sudo env PATH=$PATH"
 # export TERM="xterm-256color"
 [[ -n $TMUX ]] && export TERM="screen-256color"
 
+#vim alias
+alias v="/usr/bin/vim"
+alias vim="nvim"
+alias vi="nvim"
+alias rm="rm -rf"
+
+
 
 #########################################################################################################################
 # local setups
