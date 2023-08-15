@@ -70,7 +70,7 @@ antigen use prezto
 antigen use oh-my-zsh
 
 if [ ! -f ~/.antigen/bundles/robbyrussell/oh-my-zsh/custom/themes/mytheme.zsh-theme ]; then
-    cp ~/init_script/configs/.mytheme.zsh-theme
+    cp ~/init_script/configs/mytheme.zsh-theme ~/.antigen/bundles/robbyrussell/oh-my-zsh/custom/themes/mytheme.zsh-theme
 fi
 
 antigen theme robbyrussell/oh-my-zsh custom/themes/mytheme
