@@ -185,9 +185,16 @@ alias sudopath="sudo env PATH=$PATH"
 
 #vim alias
 alias v="/usr/bin/vim"
+alias rsync="rsync -rP" 
 alias vim="nvim"
 alias vi="nvim"
 alias rm="rm -rf"
+
+if [ ! -f ~/.local/bin/z/z.sh]; then
+    mkdir -p ~/.local/bin/z/
+fi
+git clone https://github.com/rupa/z.git
+~/.local/bin/z/z.sh
 
 
 
