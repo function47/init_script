@@ -190,6 +190,23 @@ alias vim="nvim"
 alias vi="nvim"
 alias rm="rm -rf"
 
+# tcpdump read
+alias tcpdumpread="tcpdump -qns 0 -A -r"
+
+alias pf="fzf --preview='less {}' --bind shift-up:preview-page-up,shift-down:preview-page-down"
+alias batpf="fzf --preview='bat --color=always --style=numbers {}'"
+
+sshtunnel() {
+    if [[ "$#" == 2 ]]; then
+        ssh -L $2\:localhost\:$2 $1
+    elif [[ "$#" == 3 ]]; then
+        ssh -L $2\:localhost\:$3 $1
+    else
+        echo Usage: sshtunnel hostname localport remoteport or sshtunnel hostname port
+    fi
+}
+
+
 
 
 
@@ -200,3 +217,4 @@ ZSH_LOCAL_FILE=~/.zshrc_local_asuka
 if [ -f "$ZSH_LOCAL_FILE" ]; then
     source $ZSH_LOCAL_FILE
 fi
+
