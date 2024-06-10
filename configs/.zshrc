@@ -218,3 +218,7 @@ if [ -f "$ZSH_LOCAL_FILE" ]; then
     source $ZSH_LOCAL_FILE
 fi
 
+
+
+#fzf zsh bindings
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
