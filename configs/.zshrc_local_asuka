@@ -1,0 +1,56 @@
+alias  vnc4="su -l function47 -c \"(export DISPLAY=:4; dbus-launch --exit-with-session; vncserver -geometry 1920x1080 -depth 24 :4)\""
+export PATH=$PATH:~/opt/ctag/bin
+
+
+#nodejs
+export VERSION=v16.17.0
+export DISTRO=linux-x64
+export PATH=/usr/local/lib/nodejs/node-$VERSION-$DISTRO/bin:$PATH
+export XILINXD_LICENSE_FILE=2100@199.94.60.244
+
+# SSH-Tmux tricks allowing rename the tmux pane
+ssh() {
+    if [ -n "$TMUX" ]; then
+        # Assume host_name always the last arguments
+        host_name="${@: -1}";
+        # Capture port number after 'localhost'.
+        ssh_port="$(echo $* | grep -oP 'localhost:\K\d+')";
+        if [ -n "$ssh_port" ]; then
+            tmux -2u rename-window "$(echo $host_name:$ssh_port)";
+        else
+            tmux -2u rename-window "$(echo $host_name)";
+        fi
+        command ssh "$@";
+        tmux -2u set-window-option automatic-rename "on" > /dev/null;
+    else
+        command ssh "$@";
+    fi
+}
+
+# ssh -L $1:localhost:$1 $2
+sshl() {
+    host_name="$1";
+    if [ "$#" -eq 2 ]; then
+        local_port="$2";
+        remote_port="$2";
+    else
+        remote_port="$2";
+        local_port="$3";
+    fi 
+    command ssh -L "$remote_port":localhost:"$local_port" "$host_name"
+}
+
+
+export LM_LICENSE_FILE=/home/function47/LR-125128_License.dat
+export PATH=$PATH:~/intelFPGA_lite/22.1std/questa_fse/bin
+export PATH=$PATH:/usr/include/x86_64-linux-gnu
+export VitisNetP4_Option_VISIBLE=true
+export MODELSIM_LOC=~/intelFPGA_lite/22.1std/questa_fse/bin
+#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/function47/Downloads/boost_1_82_0:/home/function47/Downloads/boost_1_82_0/stage/lib
+
+export QSYS_ROOTDIR="/home/function47/intelFPGA_lite/22.1std/quartus/sopc_builder/bin"
+#export LIBRARY_PATH="/usr/lib/x86_64-linux-gnu"
+#
+# Xilinx Paths
+export VIVADO_ROOT=/opt/Xilinx/Vivado/2022.2
+export VITIS_ROOT=/opt/Xilinx/Vitis/2022.2
