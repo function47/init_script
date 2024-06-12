@@ -207,18 +207,17 @@ sshtunnel() {
 }
 
 
+#fzf zsh bindings
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 
 
 
 #########################################################################################################################
 # local setups
-ZSH_LOCAL_FILE=~/.zshrc_local_asuka
+ZSH_LOCAL_FILE=~/.zshrc_local
 
 if [ -f "$ZSH_LOCAL_FILE" ]; then
     source $ZSH_LOCAL_FILE
 fi
 
-
-
-#fzf zsh bindings
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

@@ -1,0 +1,4 @@
+# zshrc local file for cloudlab Testnodes
+alias dpdk-unbind="sudo dpdk-devbind.py --unbind 3b:00.0"
+alias dpdk-bind="sudo dpdk-devbind.py -b vfio-pci 3b:00.0"
+alias dpdk-chk="sudo dpdk-devbind.py -s"
