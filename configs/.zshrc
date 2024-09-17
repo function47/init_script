@@ -172,7 +172,7 @@ bindkey -s '\e;' 'll\n'
 bindkey '\e[1;3D' backward-word
 bindkey '\e[1;3C' forward-word
 bindkey -s '\ew' 'cd $HOME/Desktop/Workspace\n'
-bindkey -s '\er' 'cdr\n'
+bindkey -s '\ed' 'cdr\n'
 bindkey -s '\eu' 'ranger_cd\n'
 
 # PATH
