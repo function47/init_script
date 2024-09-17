@@ -41,7 +41,7 @@ sshl() {
 }
 
 
-export LM_LICENSE_FILE=/home/function47/LR-125128_License.dat
+export LM_LICENSE_FILE=/home/function47/LR-188450_License.dat
 export PATH=$PATH:~/intelFPGA_lite/22.1std/questa_fse/bin
 export PATH=$PATH:/usr/include/x86_64-linux-gnu
 export VitisNetP4_Option_VISIBLE=true
@@ -52,5 +52,7 @@ export QSYS_ROOTDIR="/home/function47/intelFPGA_lite/22.1std/quartus/sopc_builde
 #export LIBRARY_PATH="/usr/lib/x86_64-linux-gnu"
 #
 # Xilinx Paths
-export VIVADO_ROOT=/opt/Xilinx/Vivado/2022.2
-export VITIS_ROOT=/opt/Xilinx/Vitis/2022.2
+export VIVADO_ROOT=/opt/Xilinx/Vivado/2021.2
+export VITIS_ROOT=/opt/Xilinx/Vitis/2021.2
+#1password
+export OP_SESSION_OZWF5XNMWNAP5K5X3REQHM4K5U="pEjLKgsBVqvyOQwzGonsYcX3y4tf_s-zfKHnz4ocHMQ"

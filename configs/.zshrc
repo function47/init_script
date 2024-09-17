@@ -196,6 +196,10 @@ alias tcpdumpread="tcpdump -qns 0 -A -r"
 alias pf="fzf --preview='less {}' --bind shift-up:preview-page-up,shift-down:preview-page-down"
 alias batpf="fzf --preview='bat --color=always --style=numbers {}'"
 
+fpf() {
+    cd "$(dirname "$(pf)")"
+}
+
 sshtunnel() {
     if [[ "$#" == 2 ]]; then
         ssh -L $2\:localhost\:$2 $1
